@@ -17,9 +17,15 @@ defmodule Practice do
   end
 
   def factor(x) do
+    Practice.Factor.factor(x)
     # Maybe delegate this too.
-    [1,2,x]
+    #[1,2,x]
   end
 
   # TODO: Add a palindrome? function.
+  def pali(str) do
+  # TODO: reverse, check ==
+    Practice.Pali.pali(str)
+  end
+
 end
