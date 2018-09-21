@@ -4,12 +4,11 @@ defmodule Practice.Calc do
     num
   end
 
-# !!!!!!!! change n to i
+# change n to i
 
 
-##new_l arg should be int acc, accumulate evaluations in n and recur
-  def eval(l, acc, n) do
-    #n = 0
+  def eval(l, i, n) do
+    new_l = ""
     el1 = Enum.at(l, 0)
     el2 = Enum.at(l, 1)
     if length(l) <= 2 or el2 == nil do
@@ -28,7 +27,7 @@ defmodule Practice.Calc do
             n = n + [parse_float(el1) / parse_float(Enum.at(l, i))]
           end
           new_l = [n] ++ Enum.slice(l, i+2, length(l))
-          eval(l, new_l, i)
+          eval(new_l, i, n)
         end
       end)
       #if no * or / in l, but we still have 3 or more els in l, evaluate
@@ -41,7 +40,7 @@ defmodule Practice.Calc do
         n = n + [parse_float(el1) - parse_float(Enum.at(l, i))]
       end
       new_l = n ++ Enum.slice(l, i, length(l))
-      eval(l, new_l, i)
+      eval(new_l, i, n)
     end
   end
 
