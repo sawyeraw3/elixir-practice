@@ -22,9 +22,7 @@ defmodule Practice do
     #[1,2,x]
   end
 
-  # TODO: Add a palindrome? function.
   def pali(str) do
-  # TODO: reverse, check ==
     Practice.Pali.pali(str)
   end
 
