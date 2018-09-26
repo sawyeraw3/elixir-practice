@@ -13,9 +13,9 @@ config :practice, PracticeWeb.Endpoint,
   server: true,
   http: [:inet6, port: {:system, "PORT"}],
   cache_static_manifest: "priv/static/cache_manifest.json",
-  root: "./lib/practice_web/templates/page/",
+  root: ".",
   version: Application.spec(:phoenix_distillery, :vsn),
-  url: [host: "hw02b.sawyerwarden.com", port: 80]
+  url: [host: "http://hw02b.sawyerwarden.com", port: 80]
 
 
 # Do not print debug messages in production
