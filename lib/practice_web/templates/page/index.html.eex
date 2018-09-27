@@ -1,7 +1,7 @@
 
 <div class="row">
   <div class="column">
-    <h2>Double A Number</h2>
+    <h2>Double A Number!</h2>
 
     <%= form_for @conn, "/double", fn f -> %>
       <p>Enter number: <%= text_input f, :x %></p>
